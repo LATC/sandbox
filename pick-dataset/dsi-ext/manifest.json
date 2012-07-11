@@ -1,0 +1,23 @@
+{
+  "name": "DSI",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Pick dataset from DSI",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "dsi-ext-main.html"
+  },
+  "permissions": [
+    "http://localhost/~michael/pick-dataset/"
+  ],
+"intents": {
+    "http://lab.linkeddata.deri.ie/pick-dataset": [
+      { 
+        "type": ["text/uri-list"],
+        "href": "dsi-ext-main.html",
+        "title" : "Pick dataset intent",
+        "disposition" : "inline"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+
+RewriteEngine On
+
+RewriteBase /~michael/pick-dataset
+
+RewriteRule ^$ dsi.html

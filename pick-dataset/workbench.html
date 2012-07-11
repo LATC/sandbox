@@ -1,1 +1,23 @@
-client
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Workbench</title>
+
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://webintents.org/webintents.min.js"></script>
+<script src="http://webintents.org/webintents-prefix.js"></script>
+<script>
+function invoke() {
+    var intent = new WebKitIntent("http://lab.linkeddata.deri.ie/pick-dataset", "text/uri-list", location.href);
+
+    var onSuccess = function(data) { alert(data) };
+    var onError = function(data) { alert('Problem: ' + data) };
+
+    window.navigator.webkitStartActivity(intent, onSuccess, onError);
+}
+</script>
+<p><button onclick="invoke()">get dataset URI</button></p>
+</body>
+</html>
